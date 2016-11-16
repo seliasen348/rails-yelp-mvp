@@ -1,0 +1,16 @@
+<h1>Welcome to amazing <%= @restaurant.name %></h1>
+
+<h2>The address is <%= @restaurant.address %></h2>
+
+<h3>The phone number is <%= @restaurant.phone_number %> </h3>
+
+<%= link_to "Back to list of restaurant", restaurants_path %>
+
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li>
+      <h2><%= review.content %></h2>
+      <h2><%= review.rating %></h2>
+      </li>
+  <% end %>
+</ul>
